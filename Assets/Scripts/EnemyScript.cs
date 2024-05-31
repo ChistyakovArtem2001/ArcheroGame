@@ -57,13 +57,33 @@ public class EnemyScript : MonoBehaviour, IHittable
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log($"Collision with: {collision.gameObject.name}");
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        audioSource.Play();
+    //        PlayerHealth collisionPlayerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+    //        if (collisionPlayerHealth != null)
+    //        {
+    //            Debug.Log("PlayerHealth component found");
+    //            collisionPlayerHealth.TakeDamage(damage);
+    //        }
+    //        else
+    //        {
+    //            Debug.LogError("PlayerHealth component not found on player");
+    //        }
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider Other)
     {
-        Debug.Log($"Collision with: {collision.gameObject.name}");
-        if (collision.gameObject.CompareTag("Player"))
+        Debug.Log($"Collision with: {Other.gameObject.name}");
+        if (Other.gameObject.CompareTag("Player"))
         {
             audioSource.Play();
-            PlayerHealth collisionPlayerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            PlayerHealth collisionPlayerHealth = Other.gameObject.GetComponent<PlayerHealth>();
             if (collisionPlayerHealth != null)
             {
                 Debug.Log("PlayerHealth component found");
