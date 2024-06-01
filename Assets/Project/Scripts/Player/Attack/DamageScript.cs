@@ -15,7 +15,7 @@ public class DamageScript : MonoBehaviour
     {
         if (Other.tag == "Enemy") {
             Other.GetComponent<EnemyScript2>().TakeDamage(damageAmount);
-            DS.DiactivateTriggerAttack();
+        
         }
 
     }

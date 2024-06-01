@@ -11,7 +11,7 @@ public class CheseBeh : StateMachineBehaviour
     NavMeshAgent agent;
     Transform player;
     float attackRange = 2f;
-    float noVisibleRange = 1005f;
+    float noVisibleRange = 5005f;
     private Vector3 spawnPoint;
     bool isAttackingEnrm = false;
     float attackTimer = 0f;

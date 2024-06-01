@@ -54,11 +54,16 @@ public class EnemyScript2 : MonoBehaviour, IHittable
             {
                 Debug.Log("PlayerHealth component found");
                 collisionPlayerHealth.TakeDamage(damage);
+
             }
             else
             {
                 Debug.LogError("PlayerHealth component not found on player");
             }
+        }
+        if (Other.gameObject.CompareTag("Arrow"))
+        {
+            StartCoroutine(Death());
         }
     }
 
