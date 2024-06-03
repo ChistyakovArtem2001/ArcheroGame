@@ -25,7 +25,7 @@ public class CheseBeh : StateMachineBehaviour
         agent = animator.GetComponent<NavMeshAgent>();
         enemyScript = animator.GetComponent<EnemyScript2>();
         spawnPoint = animator.GetComponent<EnemyScript2>().startPoint;
-        agent.speed = 4;
+        agent.speed = 2;
         player = GameObject.FindGameObjectWithTag("Castle").transform;
     }
 
