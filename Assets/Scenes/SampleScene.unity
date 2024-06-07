@@ -3909,6 +3909,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.6521974, y: 9.117139, z: 0.3939345}
   m_Center: {x: 0, y: 4.1704583, z: 0.07779646}
+--- !u!1 &1748946713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8227619605191391977, guid: 039d4366e239c444793f1b57d2c201c6, type: 3}
+  m_PrefabInstance: {fileID: 1096244849243820829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765133701
 GameObject:
   m_ObjectHideFlags: 0
@@ -32384,6 +32389,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1390351740, guid: 039d4366e239c444793f1b57d2c201c6, type: 3}
+      propertyPath: buttonToBind
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390351740, guid: 039d4366e239c444793f1b57d2c201c6, type: 3}
+      propertyPath: vrController
+      value: 
+      objectReference: {fileID: 1748946713}
     - target: {fileID: 3915337048071894381, guid: 039d4366e239c444793f1b57d2c201c6, type: 3}
       propertyPath: m_RootOrder
       value: 33

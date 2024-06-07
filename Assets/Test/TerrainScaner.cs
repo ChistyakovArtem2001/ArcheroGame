@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.XR.Oculus;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.XR;
 
 public class TerrainScaner : MonoBehaviour
 {
@@ -8,7 +12,8 @@ public class TerrainScaner : MonoBehaviour
     public float duration = 10;
     public float size = 500;
     public float scanRadius = 100; // Радиус сканирования
-
+    public InputHelpers.Button buttonToBind;
+    public GameObject vrController;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +22,10 @@ public class TerrainScaner : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        bool isButtonPressed = false;
+        if (Input.GetKeyUp(KeyCode.Space) || InputHelpers.IsPressed(vrController.GetComponent<InputDevice>(), buttonToBind, out isButtonPressed))
         {
             SpawnTerrainScanner();
         }
